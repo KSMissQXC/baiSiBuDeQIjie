@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CQWebController">
+            <connections>
+                <outlet property="backItem" destination="Ah7-Ag-m3a" id="Vj2-S3-0Yd"/>
+                <outlet property="forwardItem" destination="slA-yT-RUC" id="gmE-Zb-yXH"/>
+                <outlet property="refreshItem" destination="HCN-sD-ym3" id="evR-4M-byy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="9On-zw-zhj" id="lFy-o9-eMr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9On-zw-zhj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pO-xd-RAk" userLabel="底部工具条">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="E43-uW-Eai"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" title="←" id="Ah7-Ag-m3a">
+                            <connections>
+                                <action selector="backClick:" destination="-1" id="5Np-8o-fFo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="→" id="slA-yT-RUC">
+                            <connections>
+                                <action selector="forwardClick:" destination="-1" id="79X-JV-aat"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SVz-I8-4zk"/>
+                        <barButtonItem systemItem="refresh" id="HCN-sD-ym3">
+                            <connections>
+                                <action selector="refreshClick:" destination="-1" id="6Z5-tW-LrC"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7pO-xd-RAk" secondAttribute="bottom" id="4AK-MB-ujU"/>
+                <constraint firstItem="7pO-xd-RAk" firstAttribute="top" secondItem="9On-zw-zhj" secondAttribute="bottom" id="5eD-IY-SsM"/>
+                <constraint firstAttribute="trailing" secondItem="9On-zw-zhj" secondAttribute="trailing" id="5wu-LN-VdJ"/>
+                <constraint firstItem="7pO-xd-RAk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BMD-wp-6o8"/>
+                <constraint firstItem="9On-zw-zhj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qei-Fp-OKz"/>
+                <constraint firstItem="9On-zw-zhj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xcm-hd-fUZ"/>
+                <constraint firstAttribute="trailing" secondItem="7pO-xd-RAk" secondAttribute="trailing" id="kth-RU-FKh"/>
+            </constraints>
+            <point key="canvasLocation" x="518" y="411"/>
+        </view>
+    </objects>
+</document>

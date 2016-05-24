@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="KGk-i7-Jjw" customClass="CQRecommendCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3q-ea-cXj" userLabel="选中时的线">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="43"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.082352941176470587" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="m2Y-pp-tva"/>
+                        </constraints>
+                    </view>
+                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-xf-BSO" userLabel="底部线条">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="uQ1-oi-nPP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Z3q-ea-cXj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5Yn-I0-7IZ"/>
+                    <constraint firstItem="Z3q-ea-cXj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ji9-0t-4AK"/>
+                    <constraint firstAttribute="bottom" secondItem="JU0-xf-BSO" secondAttribute="bottom" id="V5j-Z4-wa5"/>
+                    <constraint firstAttribute="bottom" secondItem="Z3q-ea-cXj" secondAttribute="bottom" id="dML-Uj-Hyc"/>
+                    <constraint firstAttribute="trailing" secondItem="JU0-xf-BSO" secondAttribute="trailing" id="rcZ-cX-aST"/>
+                    <constraint firstItem="JU0-xf-BSO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rxw-KT-qRa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomView" destination="JU0-xf-BSO" id="sDI-yt-2k0"/>
+                <outlet property="selectedView" destination="Z3q-ea-cXj" id="4he-fC-P8V"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="218"/>
+        </tableViewCell>
+    </objects>
+</document>
